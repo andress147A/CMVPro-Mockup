@@ -1,7 +1,6 @@
 .login-wrapper {
   position: relative;
   min-height: 100vh;
-  background: url('/midia/fundo-sobre.jpg') no-repeat center center / cover;
   overflow: hidden;
 }
 
@@ -10,7 +9,9 @@
   position: absolute;
   inset: 0;
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-image: 
+  radial-gradient(circle at center, rgba(230, 232, 191, 0.8), rgba(12, 4, 16, 0.666)),
+  url('/midia/imagem-comida.png');
   z-index: 1;
 }
 
@@ -39,10 +40,10 @@
 }
 
 .login-card {
-  background: var(--cor-navbar);
+  background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(136, 18, 179));
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 25px rgb(17, 16, 16);
   max-width: 500px;
   width: 90%;
   text-align: center;
@@ -50,12 +51,14 @@
 }
 
 /* Estilo para o formulário */
+
 .login-card form .form-control {
   border-radius: 8px;
   padding: 10px;
 }
 
 /* Botão de link */
+
 .login-card .btn-link {
   color: var(--cor-link);
   font-weight: bold;
@@ -175,20 +178,26 @@
 }
 
 /* Sobreposição branca na imagem de fundo */
+/* Pode remover completamente */
 .cadastro-logo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(4px); /* Efeito de desfoque */
-  background-color: rgba(255, 255, 255, 0.2); /* Sobreposição translúcida */
+  content:none;  inset: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
   z-index: 1;
 }
 
+
 /* Lado esquerdo (logo com imagem de fundo) */
+
 .cadastro-logo {
   position: relative;
   flex: 1;
-  background: url('/midia/fundo-sobre.jpg') no-repeat center center / cover; /* Caminho da imagem */
+  background-image: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgb(147, 19, 194)),
+  url('/midia/cozinha.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +205,7 @@
   text-align: center;
   color: var(--fundo); /* Texto branco */
   padding: 20px;
-  z-index: 2; /* Para garantir que o conteúdo fique acima da sobreposição */
+  z-index: 2;
 }
 
 .cadastro-logo img {
@@ -208,13 +217,15 @@
 
 .cadastro-logo h1,
 .cadastro-logo p {
-  position: relative; /* Para ficar acima da sobreposição */
+  position: relative;
   z-index: 2;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
 }
 
 .cadastro-logo h1 {
   font-size: 1.8rem;
-  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -224,24 +235,16 @@
 }
 
 /* Lado direito (formulário com cores do card do Login.jsx) */
+
 .cadastro-formulario {
   flex: 1;
-  background-color: var(--cor-navbar); /* Cor do card do Login.jsx */
+  background-color: rgba(255, 250, 240, 0.84); /* Cor do card do Login.jsx */
   color: var(--fundo); /* Texto branco */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cadastro-formulario form {
-  background: var(--cor-navbar); /* Cor do card */
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-}
 
 .cadastro-formulario h2 {
   color: var(--cor-link); /* Cor do título */
