@@ -1,7 +1,6 @@
 .login-wrapper {
   position: relative;
   min-height: 100vh;
-  background: url('/midia/fundo-sobre.jpg') no-repeat center center / cover;
   overflow: hidden;
 }
 
@@ -42,7 +41,7 @@
   background: var(--cor-navbar);
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 25px rgb(17, 16, 16);
   max-width: 500px;
   width: 90%;
   text-align: center;
@@ -175,20 +174,23 @@
 }
 
 /* Sobreposição branca na imagem de fundo */
+/* Pode remover completamente */
 .cadastro-logo::before {
   content: "";
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(4px); /* Efeito de desfoque */
-  background-color: rgba(255, 255, 255, 0.2); /* Sobreposição translúcida */
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
   z-index: 1;
 }
 
+
 /* Lado esquerdo (logo com imagem de fundo) */
+
 .cadastro-logo {
   position: relative;
   flex: 1;
-  background: url('/midia/fundo-sobre.jpg') no-repeat center center / cover; /* Caminho da imagem */
+  background: linear-gradient(to bottom right, #000000, #9045d6); /* Roxo escuro para claro */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +198,7 @@
   text-align: center;
   color: var(--fundo); /* Texto branco */
   padding: 20px;
-  z-index: 2; /* Para garantir que o conteúdo fique acima da sobreposição */
+  z-index: 2;
 }
 
 .cadastro-logo img {
@@ -224,24 +226,16 @@
 }
 
 /* Lado direito (formulário com cores do card do Login.jsx) */
+
 .cadastro-formulario {
   flex: 1;
-  background-color: var(--cor-navbar); /* Cor do card do Login.jsx */
+  background-color: rgba(255, 250, 240, 0.84); /* Cor do card do Login.jsx */
   color: var(--fundo); /* Texto branco */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cadastro-formulario form {
-  background: var(--cor-navbar); /* Cor do card */
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-}
 
 .cadastro-formulario h2 {
   color: var(--cor-link); /* Cor do título */
